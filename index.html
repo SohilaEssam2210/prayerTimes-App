@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <title>Prayer Times</title>
+</head>
+
+<body>
+
+  <div class="image-slide"></div>
+
+  <div class="container" style="z-index: 9999;">
+    <div class="top-sec">
+      <div class="left">
+        <h2 id="city">Cairo</h2>
+        <div class="dates">
+          <span id="day"></span>
+          <p id="date"></p>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="clock">
+          <div id="hour"></div>
+        </div>
+        <div id="next-prayer"></div>
+        <div id="countdown"></div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="prayer-curds">
+      <div class="prayer">
+        <h3>Fajr</h3>
+        <p id="fajr"></p>
+      </div>
+      <div class="prayer">
+        <h3>Sunrise</h3>
+        <p id="sunrise"></p>
+      </div>
+      <div class="prayer">
+        <h3>Dhuhr</h3>
+        <p id="dhuhr"></p>
+      </div>
+      <div class="prayer">
+        <h3>Asr</h3>
+        <p id="asr"></p>
+      </div>
+      <div class="prayer">
+        <h3>Maghrib</h3>
+        <p id="maghrib"></p>
+      </div>
+      <div class="prayer">
+        <h3>Isha</h3>
+        <p id="isha"></p>
+      </div>
+    </div>
+
+    <div class="location">
+      <select name="" id="cities-select">
+      </select>
+      <audio controls autoplay>
+        <source src="./002.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+  </div>
+</body>
+<script src="./axios.min.js"></script>
+<script src="main.js"></script>
+
+</html>

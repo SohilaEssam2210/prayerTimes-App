@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-size: cover;
+  z-index: -1;
+  background-image: url(./img/img1.jfif);
+}
+
+.image-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  /* Ensure it stays behind other content */
+  transition: opacity 5s ease-in-out;
+  /* Smooth transition */
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.container {
+  margin: 60px 20px;
+}
+
+.top-sec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.left {
+  flex-basis: 50%;
+}
+
+.left h2 {
+  font-size: 120px;
+  margin-bottom: 10px;
+  /* text-shadow: 1px 0px 5px rgba(221, 221, 189, 0.851); */
+  color: rgb(255 189 107);
+  text-shadow: 1px 0px 5px rgb(33, 33, 32);
+}
+
+.left .dates,
+#countdown,
+#next-prayer {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255 189 107);
+  text-shadow: 1px 0px 5px rgb(33, 33, 32);
+}
+
+#countdown,
+#next-prayer {
+  text-align: center;
+  color: rgb(255 189 107);
+  text-shadow: 1px 0px 5px rgb(33, 33, 32);
+}
+
+.right .clock #hour {
+  font-size: 100px;
+  color: rgb(255 189 107);
+  text-shadow: 1px 0px 5px rgb(33, 33, 32);
+}
+
+.prayer-curds {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.prayer {
+  background-color: rgba(255, 255, 255, 0.584);
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 2px 2px 10px rgb(48, 48, 48);
+  transition: 0.4s all;
+}
+
+.prayer:hover {
+  transform: translateY(-10px);
+  box-shadow: 2px 2px 15px rgb(154, 152, 152);
+}
+
+.prayer h3 {
+  font-size: 30px;
+  margin: 0;
+  padding: 24px 0 9px;
+}
+
+.prayer p {
+  font-size: 25px;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.location audio {
+  opacity: 0.9;
+  box-shadow: 0px 0px 10px rgba(146, 145, 145, 0.522);
+  border-radius: 50px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgba(71, 68, 68, 0.499);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  color: #060606;
+  font-weight: bold;
+}
+
+.location select {
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(102, 102, 102, 0.522);
+  border: none;
+  width: 20%;
+  background-color: rgba(12, 12, 12, 0.273);
+  color: white;
+  font-size: 25px;
+}
+
+.location select option {
+  color: black;
+  font-size: 20px;
+}
+
+/* For tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+  .left h2 {
+    font-size: 80px;
+  }
+
+  .right .clock .hour {
+    font-size: 70px;
+  }
+
+  .prayer-curds {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .prayer {
+    height: 150px;
+  }
+
+  .prayer h3,
+  .prayer p {
+    font-size: 30px;
+  }
+
+  .location select {
+    width: 30%;
+    font-size: 20px;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  .left h2 {
+    font-size: 60px;
+  }
+
+  .right .clock .hour {
+    font-size: 50px;
+  }
+
+  .prayer-curds {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .prayer {
+    height: 120px;
+  }
+
+  .prayer h3,
+  .prayer p {
+    font-size: 23px;
+  }
+    .location {
+      flex-direction: column;
+      gap: 25px;
+    }
+  .location select {
+    width: 65%;
+    font-size: 20px;
+  }
+}
+
+/* For small mobile devices */
+@media screen and (max-width: 480px) {
+  .left h2 {
+    font-size: 40px;
+  }
+
+  .right .clock .hour {
+    font-size: 30px;
+  }
+
+  .prayer h3,
+  .prayer p {
+    font-size: 20px;
+  }
+
+  .location select {
+    width: 65%;
+    font-size: 20px;
+  }
+}
